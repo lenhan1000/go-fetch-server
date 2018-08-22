@@ -10,6 +10,6 @@ func main() {
 	config.Read()
 
 	server := &api.Server{}
-	server.Init()
+	server.Init(config.Server, config.Database)
 	server.Run(":3000")
 }
